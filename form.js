@@ -46,9 +46,12 @@ removeButton.addEventListener('click', function () {
 })
 
 const fillField = function () {
-  const savedContent = localStorage.getItem(key)
-  if (savedContent !== null) {
-    inputField.value = localStorage.getItem(key)
+  const lastNameSaved = localStorage.getItem(key)
+
+  if (!lastNameSaved) {
+    inputField.value = ''
+  } else {
+    inputField.value = lastNameSaved
   }
 }
 
