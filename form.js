@@ -12,6 +12,7 @@ const key = 'form-memory'
 saveButton.addEventListener('click', function () {
   //salvo il valore di input in localStorage
   localStorage.setItem(key, inputField.value)
+  inputField.value = ''
 
   const firstAlert = document.getElementsByClassName('alert')[0]
 
